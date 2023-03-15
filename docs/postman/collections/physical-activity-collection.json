@@ -1,0 +1,105 @@
+{
+  "info": {
+    "_postman_id": "0e322dc9-4ab4-4c3e-8e4d-6c4bfb7aae0f",
+    "name": "PhysicalActivityController Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all activities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/activities",
+          "host": ["{{base_url}}"],
+          "path": ["api", "activities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get activity by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/activities/:activityId",
+          "host": ["{{base_url}}"],
+          "path": ["api", "activities", ":activityId"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get activities by user ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/activities/user/:userId",
+          "host": ["{{base_url}}"],
+          "path": ["api", "activities", "user", ":userId"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create activity",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"activityType\": \"Running\",\n  \"intensity\": \"Moderate\",\n  \"duration\": 45,\n  \"date\": \"2023-03-15\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/activities",
+          "host": ["{{base_url}}"],
+          "path": ["api", "activities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update activity",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"activityType\": \"Running\",\n  \"intensity\": \"Moderate\",\n  \"duration\": 60,\n  \"date\": \"2023-03-15\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/activities/:activityId",
+          "host": ["{{base_url}}"],
+          "path": ["api", "activities", ":activityId"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete activity",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/activities/:activityId",
+          "host": ["{{base_url}}"],
+          "path": ["api", "activities", ":activityId"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

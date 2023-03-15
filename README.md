@@ -97,7 +97,7 @@ The following API endpoints are available:
 - `PUT /goals/{goal_id}`: Update an existing goal by ID.
 - `DELETE /goals/{goal_id}`: Delete a goal by ID.
 
-6. API Documentation
+## API Documentation
 
 You can access the API documentation and explore the available endpoints using the following URLs:
 
